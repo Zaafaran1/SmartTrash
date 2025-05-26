@@ -14,7 +14,7 @@ if(!$koneksi) {
 }else{
     echo "Koneksi berhasil";
 }
-
+// fsgrxtyry5ut5u
 ?>
 </body>
 </html>
