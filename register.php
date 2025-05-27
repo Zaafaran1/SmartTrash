@@ -51,16 +51,15 @@
 <body>
     <h1> Register </h1>
         
-    <form method="register.php" action="POST">
-        <input type="username" name="username" placeholder="Username" required> <br>
-        <input type="password" value=" Set Password" required>
+    <form method="POST" action="register.php">
+        <input type="email" name="email" placeholder="Email"> <br>
+        <input type="password" name="password" placeholder="Set Password">
         <label>Already have an account? <a href="index.php"><u>Login</u></a></label><br><br>
-        <input type="button" value="Continue" onlick = "location='peran.php'" /> 
+        <input type="button" name="continue" value="Continue" onclick = "location='index.php'"/> 
 
     </form>
 
 <?php
-
 
 ?>
 </body>

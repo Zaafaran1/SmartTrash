@@ -23,12 +23,11 @@
     <center>
 <body>
     <h1> Peran </h1>
-    
-    <a href= "register.php"></a>
-    <form method="peran.php" action="POST">
-        <input type="button" name="nasabah" value="Nasabah" required> <br>
-        <input type="button" name="pengepul" value="Pengepul" required> <br>
-        <input type="button" name="Pengelola" value="Pengelola" required> <br>
+
+    <form method="POST" action="peran.php">
+        <input type="button" name="nasabah" value="Nasabah"> <br>
+        <input type="button" name="pengepul" value="Pengepul" onclick = "location='password.php'"><br>
+        <input type="button" name="Pengelola" value="Pengelola"> <br>
         
     </form>
 
