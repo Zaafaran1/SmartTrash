@@ -9,6 +9,6 @@ $password = $_POST['password'] ?? '';
 $_SESSION['username'] = $username; // bisa digunakan untuk menampilkan nama user nanti
 
 // Redirect ke halaman utama
-header ("Location: peran.php");
+header ("Location: pengepul.php");
 exit;
 ?>

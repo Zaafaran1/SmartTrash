@@ -2,28 +2,33 @@
 include "koneksi.php";
 
 // FUNGSI
-function register($koneksi, $email, $password) {
-    $query = "INSERT INTO nasabah (nama, umur, alamat) VALUES ('$nama', '$umur', '$alamat')";
+function insertPengepul($koneksi, $Nama_Pengepul, $No_Telepon, $Email, $Lokasi, $Jenis_Sampah_Diterima, $Kapasitas, $Jadwal_Pengambilan, $Status_Kerjasama) {
+    $query = "INSERT INTO pengepul (Nama_Pengepul, No_Telepon, Email, Lokasi, Jenis_Sampah_Diterima, Kapasitas, Jadwal_Pengambilan, Status_Kerjasama) VALUES ('$Nama_Pengepul', '$No_Telepon', '$Email', '$Lokasi', '$Jenis_Sampah_Diterima', '$Kapasitas', '$Jadwal_Pengambilan', '$Status_Kerjasama')";
     return mysqli_query($koneksi, $query);
 }
 
-function updatePasien($koneksi, $id, $nama, $umur, $alamat) {
-    $query = "UPDATE pasien SET nama='$nama', umur='$umur', alamat='$alamat' WHERE id=$id";
+function updatePengepul($koneksi, $ID_Pengepul, $Nama_Pengepul, $No_Telepon, $Email, $Lokasi, $Jenis_Sampah_Diterima, $Kapasitas, $Jadwal_Pengambilan, $Status_Kerjasama) {
+    $query = "UPDATE pengepul SET Nama_Pengepul='$Nama_Pengepul', No_Telepon='$No_Telepon', Email='$Email', Lokasi='$Lokasi', Jenis_Sampah_Diterima='$Jenis_Sampah_Diterima', Kapasitas='$Kapasitas', Jadwal_Pengambilan='$Jadwal_Pengambilan', Status_Kerjasama='$Status_Kerjasama' WHERE ID_Pengepul=$ID_Pengepul";
     return mysqli_query($koneksi, $query);
 }
 
-function deletePasien($koneksi, $id) {
-    $query = "DELETE FROM pasien WHERE id=$id";
+function deletePengepul($koneksi, $ID_Pengepul) {
+    $query = "DELETE FROM pengepul WHERE ID_Pengepul=$ID_Pengepul";
     return mysqli_query($koneksi, $query);
 }
 
 // INSERT
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] == 'insert') {
-    $nama = $_POST["nama"];
-    $umur = $_POST["umur"];
-    $alamat = $_POST["alamat"];
+    $Nama_Pengepul = $_POST["Nama_Pengepul"];
+    $No_Telepon = $_POST["No_Telepon"];
+    $Email = $_POST["Email"];
+    $Lokasi = $_POST["Lokasi"];
+    $Jenis_Sampah_Diterima = $_POST["Jenis_Sampah Diterima"];
+    $Kapasitas = $_POST["Kapasitas"];
+    $Jadwal_Pengambilan = $_POST["Jadwal_Pengambilan"];
+    $Status_Kerjasama = $_POST["Status_Kerjasama"];
 
-    if (insertPasien($koneksi, $nama, $umur, $alamat)) {
+    if (insertPengepul($koneksi, $Nama_Pengepul, $No_Telepon, $Email, $Lokasi, $Jenis_Sampah_Diterima, $Kapasitas, $Jadwal_Pengambilan, $Status_Kerjasama)) {
         header("Location: index.php");
         exit;
     } else {
@@ -33,12 +38,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] == 'insert') {
 
 // EDIT
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] == 'edit') {
-    $id = $_POST["id"];
-    $nama = $_POST["nama"];
-    $umur = $_POST["umur"];
-    $alamat = $_POST["alamat"];
+    $ID_Pengepul = $_POST["ID_Pengepul"];
+    $Nama_Pengepul = $_POST["Nama_Pengepul"];
+    $No_Telepon = $_POST["No_Telepon"];
+    $Email = $_POST["Email"];
+    $Lokasi = $_POST["Lokasi"];
+    $Jenis_Sampah_Diterima = $_POST["Jenis_Sampah Diterima"];
+    $Kapasitas = $_POST["Kapasitas"];
+    $Jadwal_Pengambilan = $_POST["Jadwal_Pengambilan"];
+    $Status_Kerjasama = $_POST["Status_Kerjasama"];
 
-    if (updatePasien($koneksi, $id, $nama, $umur, $alamat)) {
+    if (updatePengepul($koneksi, $ID_Pengepul, $Nama_Pengepul, $No_Telepon, $Email, $Lokasi, $Jenis_Sampah_Diterima, $Kapasitas, $Jadwal_Pengambilan, $Status_Kerjasama)) {
         header("Location: index.php");
         exit;
     } else {
@@ -48,9 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST['action'] == 'edit') {
 
 // DELETE
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && $_GET['action'] == 'delete') {
-    $id = $_GET["id"];
+    $ID_Pengepul = $_GET["ID_Pengepul"];
 
-    if (deletePasien($koneksi, $id)) {
+    if (deletePengepul($koneksi, $ID_Pengepul)) {
         header("Location: index.php");
         exit;
     } else {

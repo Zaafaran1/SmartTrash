@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($result) == 1) {
         $_SESSION['login'] = true;
         $_SESSION['user'] = mysqli_fetch_assoc($result);
-        header("Location: tabel1.php");
+        header("Location: register.php");
         exit;
     } else {
         $error = "Email atau password salah!";
@@ -39,9 +39,9 @@ if (isset($_POST['login'])) {
 
         input {
             display: block;
-            margin: 10px auto;
+            margin: 8px auto;
             padding: 15px;
-            width: 200px;
+            width: 230px;
             border-radius: 10px;
         }
 
@@ -84,25 +84,6 @@ if (isset($_POST['login'])) {
             color: #FFFFFF;
         }
 
-        .google-button {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: 500;
-            background-color: white;
-            cursor: pointer;
-            margin: auto;
-            width: fit-content;
-        }
-
-        .google-button img {
-            height: 20px;
-            margin-right: 10px;
-        }
-
         .error {
             color: #FF0000;
         }
@@ -115,11 +96,11 @@ if (isset($_POST['login'])) {
 <body>
     <h1> Log in </h1>
         
-    <form method="POST" action="">
-        <input type="text" name="email" placeholder="Email" required> <br>
+    <form method="POST" action="index.php">
+        <input type="text" name="email" placeholder="Email"> <br>
         <input type="password" name="password" placeholder="Password">
         <label> Don't have an acoount yet? <a href= "register.php" ><u>Register</u></a></label><br><br>
-        <input type="button" name="login" value="Login" onlick = "location='peran.php'" /> 
+        <input type="button" name="login" value="Login" onclick = "location='peran.php'" /> 
         
     </form>
 
