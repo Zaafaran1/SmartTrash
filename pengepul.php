@@ -45,6 +45,7 @@ include 'header.php';
             <?php } ?>
         </tbody>
     </table>
+<a href="peran.php" class="btn btn-primary p-2"><-Back</a>
 </section>
 
 <?php include 'footer.php'; ?>
