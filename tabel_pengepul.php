@@ -2,6 +2,7 @@
 
 <section class="p-4 ml-5 mr-5 w-50">
     <form action="function.php" method="POST">
+        <input type="hidden" name="action" value="insert">
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Nama Pengepul</label>
             <input type="text" class="form-control" name="nama" ID_Pengepul="exampleFormControlInput1">
@@ -25,10 +26,10 @@
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Kapasitas (Kg)</label>
             <input type="number" class="form-control" name="kapasitas" ID_Pengepul="exampleFormControlInput1">
-        </div>
+        </div> 
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Jadwal Pengambilan</label>
-            <input type="date-month" class="form-control" name="jadwal" ID_Pengepul="exampleFormControlInput1">
+            <label for="exampleFormControlInput1" class="form-label">Tanggal Penerimaan</label>
+            <input type="date" class="form-control" name="tanggal" ID_Pengepul="exampleFormControlInput1">
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Status Kerja sama</label>

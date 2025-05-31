@@ -20,7 +20,7 @@
         border-radius: 10px;
     }
 
-    input[type = "button"] {
+    input[type = "submit"] {
         background-color: #73C2FB;
         font-size: 18px;
         font-weight: bold;
@@ -38,11 +38,25 @@
 
     <form method="POST" action="password.php">
         <input type="password" name="password" placeholder="Password"><br>
-        <input type="button" name="button" value="Submit" onclick = "location='proses_register.php'"/>
+        <input type="submit" name="submit" value="Submit"/>
     </form>
     </div>
-<?php
 
+<?php
+    if (isset($_POST['submit'])) {
+        $input = $_POST['password'];
+
+        // Password yang sudah ditentukan
+        $password_benar = "SmartTrash*_";
+
+        if ($input === $password_benar) {
+            header("Location: pengepul.php");
+            exit;
+        } else {
+            echo "<p style='color: red;'>Password salah ❌</p>";
+        }
+    }
 ?>
+
 </body>
 </html>

@@ -25,15 +25,10 @@
     <h1> Peran </h1>
 
     <form method="POST" action="peran.php">
-        <input type="button" name="nasabah" value="Nasabah"> <br>
+        <input type="button" name="nasabah" value="Nasabah" onclick = "location='nasabah.php'"> <br>
         <input type="button" name="pengepul" value="Pengepul" onclick = "location='password.php'"><br>
-        <input type="button" name="Pengelola" value="Pengelola"> <br>
+        <input type="button" name="Pengelola" value="Pengelola" onclick = "location='pengelola.php'" ><br>
         
     </form>
-
-<?php
-
-
-?>
 </body>
 </html>

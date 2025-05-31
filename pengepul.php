@@ -21,7 +21,7 @@ include 'header.php';
                 <th scope="col">Lokasi</th>
                 <th scope="col">Jenis Sampah Diterima</th>
                 <th scope="col">Kapasitas</th>
-                <th scope="col">Jadwal Pengambilan</th>
+                <th scope="col">Tanggal Penerimaan</th>
                 <th scope="col">Status Kerjasama</th>
             </tr>
         </thead>
@@ -35,11 +35,11 @@ include 'header.php';
                     <td><?= $pengepul->Lokasi ?></td>
                     <td><?= $pengepul->Jenis_Sampah_Diterima ?></td>
                     <td><?= $pengepul->Kapasitas ?></td>
-                    <td><?= $pengepul->Jadwal_Pengambilan ?></td>
+                    <td><?= $pengepul->Tanggal_Penerimaan ?></td>
                     <td><?= $pengepul->Status_Kerjasama ?></td>
                     <td>
-                        <a href="edit.php?id=<?= $pengepul->id ?>" class="btn btn-success btn-sm">Edit</a>
-                        <a href="function.php?action=delete&id=<?= $pengepul->id ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
+                        <a href="edit.php?ID_Pengepul=<?= $pengepul->ID_Pengepul ?>" class="btn btn-success btn-sm">Edit</a>
+                        <a href="function.php?action=delete&ID_Pengepul=<?= $pengepul->ID_Pengepul ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
                     </td>
                 </tr>
             <?php } ?>
