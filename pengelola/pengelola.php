@@ -53,11 +53,11 @@
                 <button type="submit" class="bg-[#1d8ca3] text-white font-semibold px-4 py-2 rounded">Submit Laporan</button>
             </form>
         </section>
-        <section id="dataPengepul" class="hidden">Data Pengepul Section</section>
-        <section id="pertukaran" class="hidden">Pertukaran Section</section>
-        <section id="riwayatPengiriman" class="hidden">Riwayat Pengiriman Section</section>
-        <section id="jenisSampah" class="hidden">Jenis Sampah Section</section>
-        <section id="pengolahanSampah" class="hidden">Pengolahan Sampah Section</section>
+        <section id="dataPengepul" class="hidden">Data Pengepul</section>
+        <section id="pertukaran" class="hidden">Data Pertukaran Poin</section>
+        <section id="riwayatPengiriman" class="hidden">Riwayat Pengiriman</section>
+        <section id="jenisSampah" class="hidden">Jenis Sampah</section>
+        <section id="pengolahanSampah" class="hidden">Pengolahan Sampah</section>
     </main>
 
     <script>
